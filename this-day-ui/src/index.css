@@ -9,3 +9,13 @@
 .dark {
   @apply bg-gray-800 text-zinc-50;
 }
+
+.react-calendar {
+  @apply bg-gray-700;
+}
+
+.react-calendar__title:enabled:hover,
+.react-calendar__navigation button:enabled:hover, 
+.react-calendar__navigation button:enabled:focus {
+  @apply bg-gray-800;
+}

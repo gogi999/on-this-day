@@ -19,7 +19,7 @@ exports.pubsub = functions
     .onRun(async () => {
         try {
             const scrapedData = await scraper.scrapeData();
-            await db.collection('days').doc(getToday()).set(scrapedData);
+            return db.collection('days').doc(getToday()).set(scrapedData);
         } catch (err) {
             throw new Error(err);
         }
